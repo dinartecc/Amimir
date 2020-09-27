@@ -1,0 +1,81 @@
+﻿@model IEnumerable<AmimirMVC.ServiceReferenceAmimir.STPR_ANIME_LISTA_Result>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEstreno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Popularidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puntuacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sinopsis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precuela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secuela)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Estado)
+    </td>
+    <td>
+        @if (item.FechaEstreno.HasValue)
+        {
+            @item.FechaEstreno.Value.ToString("dd/MM/yyyy")
+        }
+        else
+        {
+            @"N/A".ToString();
+        }
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Popularidad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Puntuacion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sinopsis)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Precuela)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Secuela)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

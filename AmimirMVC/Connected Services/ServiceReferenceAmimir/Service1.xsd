@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/Amimir/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AmimirWCF" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoLista">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="estadoListaResult" nillable="true" type="q1:ArrayOfSTPR_ESTADO_LISTA_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoGuardar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoGuardarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="estadoGuardarResult" nillable="true" type="q2:STPR_ESTADO_GUARDAR_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="estadoDatosResult" nillable="true" type="q3:STPR_ESTADO_LISTA_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoEditar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoEditarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="estadoEditarResult" nillable="true" type="q4:STPR_ESTADO_EDITAR_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoBorrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estadoBorrarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeLista">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="animeListaResult" nillable="true" type="q5:ArrayOfSTPR_ANIME_LISTA_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeGuardar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaEstreno" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SecuelaID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="PrecuelaID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="Sinopsis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Puntuacion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Popularidad" type="xs:decimal" />
+        <xs:element minOccurs="0" name="EstadoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeGuardarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="animeGuardarResult" nillable="true" type="q6:STPR_ANIME_GUARDAR_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="animeDatosResult" nillable="true" type="q7:STPR_ANIME_LISTA_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeEditar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaEstreno" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SecuelaID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="PrecuelaID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="Sinopsis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Puntuacion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Popularidad" type="xs:decimal" />
+        <xs:element minOccurs="0" name="EstadoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeEditarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="animeEditarResult" nillable="true" type="q8:STPR_ANIME_EDITAR_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeBorrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animeBorrarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="capituloLista">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="capituloListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="capituloListaResult" nillable="true" type="q9:ArrayOfSTPR_CAPITULO_LISTA_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="capituloGuardar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AnimeID" type="xs:int" />
+        <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Duracion" type="xs:int" />
+        <xs:element minOccurs="0" name="Sinopsis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Orden" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaPublicado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="capituloGuardarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AmimirWCF" minOccurs="0" name="capituloGuardarResult" nillable="true" type="q10:STPR_CAPITULO_GUARDAR_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
